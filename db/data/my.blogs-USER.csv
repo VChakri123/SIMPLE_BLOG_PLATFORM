@@ -1,0 +1,7 @@
+
+user_id,username,email,password_hash,profile_picture,role,created_at
+1,Chakri,chakri@gmail.com,chakri@123,"C:\Users\chakradhar.vangur\Downloads\Artihcus_DTOP_Wall_01 1.jpg",author,2023-06-21 10:15:23
+2,Nithiin,nithin@gmail.com,nithin@567,img.jpg,user,2023-05-12 14:05:19
+3,Ram,Ram@gmail.com,Ram789,img.jpg,admin,2023-03-28 09:45:57
+4,TechGuru,guru.tech@gmail.com,img.jpg,admin,2023-03-28 09:45:57
+5,John,john@gmail.com,img.jpg,user,2023-07-15 13:45:

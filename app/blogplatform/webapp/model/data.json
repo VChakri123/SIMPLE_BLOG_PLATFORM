@@ -1,0 +1,50 @@
+{
+    "selectedKey": "page1",
+    "class": "pages",
+    "navigation": [
+      
+        {
+            "title": "Analytics Dashboard",
+            "key": "page1",
+            "icon": "sap-icon://business-objects-experience",
+            "visable": true
+        },
+        {
+            "title": "Write a New Post",
+            "key": "page2",
+            "icon": "sap-icon://add-document"
+        },
+        {
+            "title": "All Blog Posts",
+            "class": "pages",
+            "key": "page3",
+            "icon": "sap-icon://document-text"
+        },
+        {
+            "title": "Featured Posts",
+            "key": "page4",
+            "icon": "sap-icon://favorite"
+        },
+        {
+            "title": "Drafts",
+            "key": "page5",
+            "icon": "sap-icon://notes"
+        },
+        {
+            "title": "Archived Posts",
+            "key": "page6",
+            "icon": "sap-icon://folder"
+        },
+        {
+            "title": "Blog History",
+            "key": "page7",
+            "icon": "sap-icon://time-entry-request"
+        },
+        {
+            "title": "Schedule a Post",
+            "key": "page8",
+            "icon": "sap-icon://appointment-2",
+            "iconColor": "Success"
+        }
+    ]
+}

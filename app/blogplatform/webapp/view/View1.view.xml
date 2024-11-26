@@ -1,0 +1,51 @@
+<mvc:View
+    controllerName="com.app.blogplatform.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+>
+    <html:head>
+        <html:link
+            rel="stylesheet"
+            type="text/css"
+            href="css/style.css"
+            class="header"
+        />
+    </html:head>
+
+    <Page
+        id="page"
+        class="page"
+        title="{i18n>title}"
+        titleAlignment="Center"
+    >
+        <headerContent>
+         
+            <Button
+                id="books"
+                text="Available Books"
+                type="Default"
+                press="AvailableBooksBtn"
+            />
+            <Button
+                icon="sap-icon://visits"
+                id="idbt0n1111"
+                text="Login"
+                type="Transparent"
+                press="onloginBtnClick"
+            />
+            <Button
+                icon="sap-icon://add-employee"
+                id="idbtn1"
+                text="SignUp"
+                type="Transparent"
+                press="onClickSignUp"
+            />
+
+        </headerContent>
+    </Page>
+</mvc:View>

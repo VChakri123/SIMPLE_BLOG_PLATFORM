@@ -1,0 +1,8 @@
+
+post_id,	title,	content,	author_id,	created_at,	updated_at,	category_id,	cover_image,	views
+1,	"Exploring the Art of Writing",	A deep dive into creative writing techniques and how to find your unique voice,	4,	2023-08-10 12:15:45	2023-08-12 09:24:30,	2,	/images/writing.jpg,	125
+2,	"Top 10 Travel Destinations",	Discover the top places to visit this year including hidden gems and popular tourist spots,	5,	2023-09-05 11:30:12	2023-09-07 08:00:50,	3,	/images/travel.jpg,	432
+3,	"Understanding Cloud Computing",	An introductory guide to cloud computing and how its transforming businesses,	3,	2023-07-19 14:20:18	2023-07-20 10:45:09,	1,	/images/cloud.jpg,	231
+4,	"Healthy Eating on a Budget",	Tips and tricks to eat well without breaking the bank including meal planning ideas,	1,	2023-06-15 13:40:22	2023-06-18 16:00:20,	4,	/images/health.jpg,	154
+5,	"How to Start Coding",	A beginner-friendly guide to start learning programming covering various languages and resources,	8,	2023-05-28 17:00:37	2023-05-30 12:22:15,	1,	/images/coding.jpg,	345
+6,	"The Benefits of Meditation",	Explore how meditation can improve your mental and physical well-being with tips for beginners,	7,	2023-08-22 09:35:47	2023-08-24 14:05:23,	5,	/images/meditation.jpg,	278

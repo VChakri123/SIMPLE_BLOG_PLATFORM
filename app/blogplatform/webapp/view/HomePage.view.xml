@@ -1,0 +1,361 @@
+<mvc:View
+    controllerName="com.app.blogplatform.controller.HomePage"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:tnt="sap.tnt"
+    xmlns:mdc="sap.ui.mdc"
+    xmlns:mdcValueHelp="sap.ui.mdc.valuehelp"
+    xmlns:mdcValueHelpContent="sap.ui.mdc.valuehelp.content"
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:viz.data="sap.viz.ui5.data"
+    xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+    xmlns:viz="sap.viz.ui5.controls"
+    xmlns:chart="sap.suite.ui.commons"
+    xmlns:microchart="sap.suite.ui.microchart"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    height="100%"
+>
+    <tnt:ToolPage id="toolPage">
+        <tnt:header>
+            <tnt:ToolHeader
+                id="_IDGenToolHeader1"
+                class="header"
+            >
+                <Button
+                    id="sideNavigationToggleButton"
+                    icon="sap-icon://menu2"
+                    type="Transparent"
+                    press=".onSideNavButtonPress"
+                >
+                    <layoutData>
+                        <OverflowToolbarLayoutData
+                            id="_IDGenOverflowToolbarLayoutData"
+                            priority="NeverOverflow"
+                        />
+                    </layoutData>
+                </Button>
+
+                <Image
+                    id="_IDGenImage"
+                    height="1.5rem"
+                    class="sapUiSmallMarginBegin"
+                    src="https://www.sap.com/dam/application/shared/logos/sap-logo-svg.svg"
+                />
+
+                <Title
+                    level="H1"
+                    text="SIMPLE-BLOG-PLATFORM"
+                    wrapping="false"
+                    class="TitleMain"
+                    id="blogPlatform"
+                >
+                    <layoutData>
+                        <OverflowToolbarLayoutData
+                            id="_IDGenOverflowToolbarLayoutData1"
+                            priority="Disappear"
+                        />
+                    </layoutData>
+                </Title>
+                <Text
+                    wrapping="false"
+                    id="secondTitle"
+                    class="TitleBOX"
+                >
+                    <layoutData>
+                        <OverflowToolbarLayoutData
+                            id="_IDGenOverflowToolbarLayoutData2"
+                            priority="Disappear"
+                        />
+                    </layoutData>
+                </Text>
+
+                <ToolbarSpacer
+                    id="_IDGenToolbarSpacer"
+                    width="1.125rem"
+                />
+
+                <ToolbarSpacer id="_IDGenToolbarSpacer1">
+                    <layoutData>
+                        <OverflowToolbarLayoutData
+                            id="_IDGenOverflowToolbarLayoutData3"
+                            priority="NeverOverflow"
+                            minWidth="20px"
+                        />
+                    </layoutData>
+                </ToolbarSpacer>
+
+                <Button
+                    id="idTextName2"
+                    text="Back"
+                    type="Accept"
+                    press=".handleUserNamePress2"
+                    ariaHasPopup="Menu"
+                >
+                    <layoutData>
+                        <OverflowToolbarLayoutData
+                            id="_IDGenOverflowToolbarLayoutData6"
+                            priority="NeverOverflow"
+                        />
+                    </layoutData>
+                </Button>
+
+                <Button
+                    id="idTextName1"
+                    text="About"
+                    type="Up"
+                    press="handleUserNamePress1"
+                    ariaHasPopup="Menu"
+                >
+                    <layoutData>
+                        <OverflowToolbarLayoutData
+                            id="_IDGenOverflowToolbarLayoutData5"
+                            priority="NeverOverflow"
+                        />
+                    </layoutData>
+                </Button>
+                
+                <Button
+                    id="idTextName3"
+                    text="Chakradhar Reddy"
+                    type="Transparent"
+                    press=".handleUserNamePress3"
+                    ariaHasPopup="Menu"
+                >
+                    <layoutData>
+                        <OverflowToolbarLayoutData
+                            id="_IDGenOverflowToolbarLayoutData7"
+                            priority="NeverOverflow"
+                        />
+                    </layoutData>
+                </Button>
+                <Avatar
+                    id="_IDGenAvatar"
+                    src="test-resources/sap/tnt/images/person_avatar_01.png"
+                    displaySize="XS"
+                    press="onAvatarPressed"
+                    tooltip="Profile"
+                >
+                    <layoutData>
+                        <OverflowToolbarLayoutData
+                            id="_IDGenOverflowToolbarLayoutData8"
+                            priority="NeverOverflow"
+                        />
+                    </layoutData>
+                </Avatar>
+            </tnt:ToolHeader>
+        </tnt:header>
+
+        <tnt:sideContent>
+            <tnt:SideNavigation
+                id="SideNavigation_HP"
+                expanded="true"
+                selectedKey="{/selectedKey}"
+                itemSelect=".onItemSelect"
+            >
+                <tnt:NavigationList
+                    id="NavigationList1_HP"
+                    items="{path: '/navigation'}"
+                >
+                    <tnt:NavigationListItem
+                        id="NavigationListItem1_HP"
+                        text="{title}"
+                        icon="{icon}"
+                        enabled="{enabled}"
+                        expanded="{expanded}"
+                        items="{items}"
+                        key="{key}"
+                    >
+                        <tnt:NavigationListItem
+                            id="NavigationListItem2_HP"
+                            text="{title}"
+                            key="{key}"
+                            enabled="{enabled}"
+                        />
+                    </tnt:NavigationListItem>
+                </tnt:NavigationList>
+                <tnt:fixedItem>
+                    <tnt:NavigationList
+                        id="NavigationList2_HP"
+                        items="{path: '/fixedNavigation'}"
+                    >
+                        <tnt:NavigationListItem
+                            id="NavigationListItem3_HP"
+                            text="{title}"
+                            icon="{icon}"
+                        />
+                    </tnt:NavigationList>
+                </tnt:fixedItem>
+            </tnt:SideNavigation>
+        </tnt:sideContent>
+
+
+
+
+        <tnt:mainContents>
+            <NavContainer
+                id="pageContainer"
+                initialPage="page2"
+            >
+                <pages>
+                    <ScrollContainer
+                        id="page1"
+                        horizontal="false"
+                        vertical="true"
+                        height="100%"
+                        class="sapUiContentPadding"
+                    >
+                       <html:div>
+                            The
+                            <html:span
+                                id="ScrollContainertext1"
+                                class="span"
+                            >
+                                Analytics Dashboard
+                            </html:span>
+                             for the blog platform provides a comprehensive overview of key performance metrics that help track and optimize blog performance.
+
+In the Overview Section, you can see critical statistics such as the total number of posts published, the active authors contributing to the blog, the cumulative views across all posts, and the number of new subscribers gained within the last month.
+
+The Audience Insights section offers valuable demographic information, including a chart showing where most of your readers are from (top regions), a breakdown of age and gender, and a detailed view of traffic sources, such as search engines, social media, direct links, or referrals.
+
+For measuring Engagement Metrics, you’ll find insights such as the average time readers spend on each blog post, the bounce rate (percentage of users leaving after viewing just one page), and a list of the most engaging posts, based on metrics like views, comments, and shares.
+
+The Popular Posts section showcases the top 5 most viewed posts, most liked posts, and top commented posts, giving you a snapshot of the content that resonates most with your readers.
+
+In the Post Performance Trends section, you can track views over the past weeks or months through graphs, as well as engagement trends, such as comments, likes, and shares, to identify patterns and improve content strategy.
+
+For Author Contributions, the dashboard highlights the top authors with the most popular posts, along with recent posts categorized by author, showing their views and engagement.
+
+The Subscriber Growth section presents a graph of new subscribers over time, along with the top referral sources driving the most subscriptions, such as social media or email marketing campaigns.
+
+Content Insights provide information on which categories, such as Technology, Health, or Travel, generate the most views and engagement, while also showcasing the most popular tags and their associated performance metrics.
+
+Finally, the Goals and Objectives section allows you to set and track monthly goals for views, posts published, and subscriber growth, with visual progress bars or percentages to show how close you are to achieving those targets. This dashboard serves as a powerful tool for analyzing performance and guiding future content and marketing strategies.
+                        </html:div>
+                    </ScrollContainer>
+
+                    <ScrollContainer
+                        id="page2"
+                        horizontal="false"
+                        vertical="true"
+                        height="100%"
+                        class="sapUiContentPadding"
+                    >
+                        <Text
+                            id="ScrollContainertext2"
+                            text="Welcome to the Write a New Post section! Here, you can create and publish your own blog content. Start by entering a Post Title—make it catchy and descriptive, as it will appear at the top of your post. Next, choose a Category that best fits your post’s theme. Categories such as Technology, Health, Travel, and Lifestyle help organize content and make it easier for readers to find relevant articles. In the Post Content area, write the main body of your post. You can include text formatting like bold, italics, and lists, and add multimedia elements like images or videos by using the Insert Image or Insert Video options. Links can also be added to external sites or other posts within the platform.
+
+For an engaging display, add a Post Excerpt—a short summary (up to 300 characters) that will appear on the homepage or category pages. This is optional but recommended to attract readers. Tags allow you to add keywords to further categorize your post, making it even easier to discover. Example tags include AI, Health Tips, and Travel Adventures.
+
+When it comes to Visibility, choose who can view your post: Public (visible to everyone), Private (only visible to you, ideal for drafts), or Scheduled (set a date and time for automatic publishing). Under SEO Settings, you can add a Meta Description—a short description for search engines—and Focus Keywords to improve search visibility. Finally, when your post is complete, select from Publish Options: Save as Draft to keep editing later, Publish to make it live immediately, or Preview to see how it will look before publishing.
+                       "
+                        />
+                    </ScrollContainer>
+
+                    <ScrollContainer
+                        id="page3"
+                        horizontal="false"
+                        vertical="true"
+                        height="100%"
+                        class="sapUiContentPadding"
+                    >
+                        <Text
+                            id="ScrollContainertext3"
+                            text="Welcome to the All Blog Posts section! Here, you’ll find a comprehensive list of all published blog posts on the platform, making it easy to explore content across various categories and discover articles of interest. Use the Search and Filter feature to look up specific posts by title, author, or keyword, or narrow down posts by category, publish date, or popularity. You can also sort posts by options such as Most Recent, Most Viewed, Most Liked, or Top Commented to find the content that best matches your preference.
+
+Each post includes a preview displaying the title, author, publication date, and a brief excerpt—simply click on the post title or Read More link to view the full content. Pagination at the bottom of the page allows for easy navigation through multiple pages of posts, so you can browse content seamlessly.
+
+Explore popular categories like Technology, Health, Travel, and Lifestyle to dive deeper into topics that suit your interests. Whether you’re looking for recent updates, popular topics, or archived articles, the All Blog Posts section provides a complete and engaging view of all content on the blog platform. Enjoy reading and discovering new ideas!"
+                        />
+                    </ScrollContainer>
+
+                    <ScrollContainer
+                        id="page4"
+                        horizontal="false"
+                        vertical="true"
+                        height="100%"
+                        class="sapUiContentPadding"
+                    >
+                        <Text
+                            id="ScrollContainertext4"
+                            text="Welcome to the Featured Posts section! Here, you can find a curated selection of the most popular and highly recommended blog posts. These posts are handpicked based on their relevance, quality, and engagement, offering you a closer look at the content that stands out on the platform. Whether it's a post with high views, interesting insights, or exceptional reader engagement, this section highlights the best of what our blog has to offer.
+
+Featured Posts include articles from various categories such as Technology, Health, Lifestyle, and more. You can explore a wide range of topics, from in-depth analyses to trending discussions, all carefully chosen to keep you informed and inspired. These posts are updated regularly to ensure you have access to fresh, relevant content.
+
+Browse through the Featured Posts to discover new ideas, insights, and inspiration. Whether you're looking for the latest trends or timeless articles, this section makes it easy to find posts that are worth your attention."
+                        />
+                    </ScrollContainer>
+
+                    <ScrollContainer
+                        id="page5"
+                        horizontal="false"
+                        vertical="true"
+                        height="100%"
+                        class="sapUiContentPadding"
+                    >
+                        <Text
+                            id="ScrollContainertext5"
+                            text="Welcome to the Drafts section! Here, you can manage all of your unpublished blog posts. This is the space where you can save your work-in-progress articles, allowing you to come back to them later for editing or completion. Whether you’re brainstorming ideas, refining your writing, or simply need more time to perfect your post, your drafts are stored here for easy access.
+
+Each draft includes a title, the date it was last edited, and an option to continue editing. You can also delete drafts that you no longer wish to keep. Once you're ready to publish a draft, you can easily move it to the Published section by completing your edits and choosing to make it live.
+
+The Drafts section offers a safe space for you to develop your posts at your own pace, ensuring that everything is just right before going public. Take your time to fine-tune your ideas and content until you're ready to share them with the world."
+                        />
+                    </ScrollContainer>
+
+                    <ScrollContainer
+                        id="page6"
+                        horizontal="false"
+                        vertical="true"
+                        height="100%"
+                        class="sapUiContentPadding"
+                    >
+                        <Text
+                            id="ScrollContainertext6"
+                            text="Welcome to the Archived Posts section! Here, you can access all previously published blog posts that are no longer actively featured but are still available for reference. This section serves as a repository for older content that may have been removed from the homepage or category pages but is preserved for historical value or future use.
+
+Archived posts include a wide range of topics from past articles, allowing you to revisit content that may still be relevant or interesting. Whether you're looking for information on older trends, revisiting classic posts, or simply browsing through the platform's history, the Archived Posts section provides an easy way to access and explore previously published material.
+
+These posts are typically organized by the original publish date, allowing for straightforward navigation and discovery. While they may not be actively promoted, archived posts can still provide valuable insights and remain an important part of the blog’s content library.t"
+                        />
+                    </ScrollContainer>
+
+                    <ScrollContainer
+                        id="page7"
+                        horizontal="false"
+                        vertical="true"
+                        height="100%"
+                        class="sapUiContentPadding"
+                    >
+                        <Text
+                            id="ScrollContainertext7"
+                            text="Welcome to the Blog History section! This area allows you to explore the evolution of content on the blog, offering a detailed look at past articles, updates, and changes over time. Here, you can track the progression of the platform, from its earliest posts to more recent updates, and discover how the blog’s themes and topics have developed.
+
+The Blog History section is an excellent resource for anyone looking to understand the journey of the platform, revisit past posts, or analyze trends over time. Whether you're interested in the origins of certain topics, the growth in content variety, or how engagement has evolved, this section provides a comprehensive timeline of the blog’s development.
+
+In addition to viewing past content, you can also see records of post edits, updates, and any significant changes made to the blog, making it an invaluable tool for both bloggers and readers who want to track the history of the platform."
+                        />
+                    </ScrollContainer>
+
+                    <ScrollContainer
+                        id="page8"
+                        horizontal="false"
+                        vertical="true"
+                        height="100%"
+                        class="sapUiContentPadding"
+                    >
+                        <Text
+                            id="ScrollContainertext8"
+                            text="Welcome to the Schedule a Post section! Here, you can plan and schedule your blog posts to be published automatically at a future date and time. This feature allows you to create content in advance and set it to go live at the perfect moment, ensuring that your posts reach your audience even when you're not available to manually publish them.
+
+In the Schedule a Post section, you can choose the exact time and date you want your post to be published, making it easier to align with your content strategy and audience engagement goals. Whether you’re planning a post for a special event, a time zone consideration, or just want to stay organized, scheduling your posts helps maintain a consistent flow of content.
+
+Once a post is scheduled, it will remain in your draft section until the designated time, at which point it will automatically be published on the platform. This feature is ideal for bloggers who want to stay ahead of deadlines, plan for the future, and ensure that their content is always timely."
+                        />
+                    </ScrollContainer>
+                </pages>
+            </NavContainer>
+        </tnt:mainContents>
+    </tnt:ToolPage>
+</mvc:View>

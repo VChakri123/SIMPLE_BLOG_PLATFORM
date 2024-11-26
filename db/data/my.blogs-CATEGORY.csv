@@ -1,0 +1,11 @@
+category_id,	name,	description,	post_count
+1,	Technology,	Posts related to the latest in tech	,152
+2,	Gardening,	Tips and guides for gardening enthusiasts,	78
+3,	Astronomy,	Insights and news about the cosmos,	64
+4,	Writing,	Advice and techniques for writers,	92
+5,	Travel,	Stories tips and guides for travelers,	130
+6,	Food & Health,	Recipes and health tips for all,	85
+7,	Business,	Posts on entrepreneurship and startups,	70
+8,	Mindfulness,	Tips and practices for mindful living,	50
+9,	Books & Reading,	Book reviews and reading recommendations,	88
+10,	Finance,	Articles on personal finance and investing,	40

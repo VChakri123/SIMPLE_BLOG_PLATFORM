@@ -1,0 +1,6 @@
+comment_id,	post_id,	user_id,	name,	email,	content,	created_at
+1,	1,	3,	NULL,	NULL,	"Great insights on AI Thanks for sharing!",	2023-08-16 11:10:45
+2,	2,	NULL, charan,	charan.r@gmail.com,	"Loved the gardening tips very helpful!",	2023-07-11 15:30:20
+3,	3,	10,	NULL,	NULL,	"Amazing post on space exploration!",	2023-09-02 17:00:10
+4,	4,	4,	NULL,	NULL,	"Writing techniques were spot onthanks!",	2023-05-19 14:15:55
+5,	5,	NULL,	deva ,	deva.t@gmail.com,	"Looking forward to trying these travel tips!",	2023-07-01 19:05:40
